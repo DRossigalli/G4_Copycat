@@ -11,7 +11,7 @@ box.forEach(frase => {
         })
         e.target.closest('.script').classList.add('active');
 
-        let text = e.target.textContent;
+        let text = e.target.innerText;
         text = text.trim();
 
         navigator.clipboard.writeText(text).then(function () {
