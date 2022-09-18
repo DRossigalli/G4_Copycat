@@ -15,7 +15,7 @@
     font-size: 25px;
 }
 nav {
-    height: 2vw;
+    height: 2vh;
     width: 100%;
     background-color: var(--primary);
     display: flex;
