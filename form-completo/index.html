@@ -14,13 +14,23 @@
 </head>
 
 <body>
-    <a href="../index.html">
-        <header>
-            <img src="../../src/logo.svg" alt="">
-            Copycat
-        </header>
-    </a>
-    <section class="fluxo">
+    <nav>
+        <a href="../index.html">
+            <img src="../src/home_white_24dp.svg" alt="">
+        </a>
+        <a href="../form-completo/index.html">Form Completo</a>
+        <!-- <a href="#">Form Incompleto</a> -->
+        <a href="../chat/index.html">Chat</a>
+        <!-- <a href="./form-completo/index.html">MQL</a> -->
+        <a onclick="share()">Compartilhe com alguém!</a>
+        <a class="installApp">Instale o Copycat</a>
+    </nav>
+    
+    <header>
+        <img src="../src/logo.svg" alt="">
+        Copycat
+    </header>
+    <!-- <section class="fluxo">
         <section class="container">
             <a href="index.html">
                 <div class="script active">Fluxo de cadência</div>
@@ -29,15 +39,35 @@
                 <div class="script">Tarefas</div>
             </a>
             </div>
-        </section>
-        <main>
+        </section> -->
 
+        <main>
             <!-- D1 -->
             <section class="fase">
                 <span class="title">Dia 1</span>
                 <section class="container">
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D1] Ligação 1</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D1] Ligação 2</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D1] WhatsApp 1</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D1] Ligação 3</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D1] Ligação 4</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D1] E-mail 1</span>
+                    </div>
+                </section>
+                <section class="container">
                     <div class="script">
-                        <span>Olá, XXX! Aqui é o Diego, do G4 Educação</span>
+                        <span>Olá, XXX! Aqui é <span class="nome"></span>, do G4 Educação</span>
                     </div>
                     <div class="script">
                         <span> Você foi aprovado para a próxima etapa do processo da nossa Imersão. Para garantir a sua
@@ -53,6 +83,23 @@
             <section class="fase">
                 <span class="title">Dia 2</span>
                 <section class="container">
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D2] Ligação 1</span>
+                    </div>
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D2] Ligação 2</span>
+                    </div>
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D2] WhatsApp 2</span>
+                    </div>
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D2] Ligação 3</span>
+                    </div>
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D2] Ligação 4</span>
+                    </div>
+                </section>
+                <section class="container">
                     <div class="script">
                         <span>Opa, tudo bem? Estou com sua aplicação pendente, XXX. Para que a gente possa direcionar as
                             melhores soluções do G4 Educação para seu negócio, preciso apenas confirmar suas
@@ -64,9 +111,33 @@
                 </section>
             </section>
 
+            <!-- D3 -->
+            <section class="fase">
+                <span class="title">Dia 3</span>
+                <section class="container">
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D3] Ligação 1</span>
+                    </div>
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D3] Ligação 2</span>
+                    </div>
+                </section>
+            </section>
+
             <!-- D4 -->
             <section class="fase">
                 <span class="title">Dia 4</span>
+                <section class="container">
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D4] Ligação 1</span>
+                    </div>
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D4] WhatsApp 3</span>
+                    </div>
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D4] Ligação 2</span>
+                    </div>
+                </section>
                 <section class="container">
                     <div class="script">
                         <span>Consegui uma condição especial para você participar da nossa Imersão, XXX. Como disse
@@ -79,9 +150,50 @@
                 </section>
             </section>
 
+            <!-- D5 -->
+            <section class="fase">
+                <span class="title">Dia 5</span>
+                <section class="container">
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D5] Ligação 1</span>
+                    </div>
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D5] E-mail 1</span>
+                    </div>
+                    <div class=" script script--tarefa">
+                        <span>[IM - SDR - D5] Ligação 2</span>
+                    </div>
+                </section>
+                <section class="container">
+                    <div class="script">
+                        <span>Olá, XXX. Tentei entrar em contato outras vezes e como estamos com muita demanda, hoje é o
+                            último dia que ainda consigo segurar sua vaga + garantir a sua condição especial para uma de
+                            nossas Imersões</span>
+                    </div>
+                    <div class="script">
+                        <span>Se ainda tiver interesse, responda essa mensagem que entrarei em contato para explicar o
+                            próximo passo</span>
+                    </div>
+                </section>
+            </section>
+
             <!-- D6 -->
             <section class="fase">
                 <span class="title">Dia 6</span>
+                <section class="container">
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D6] Ligação 1</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D6] Ligação 2</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D6] WhatsApp 1</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - D6] Linkedin 1</span>
+                    </div>
+                </section>
                 <section class="container">
                     <div class="script">
                         <span>Olá, XXX. Tentei entrar em contato outras vezes e como estamos com muita demanda, hoje é o
@@ -110,6 +222,26 @@
             <section class="fase">
                 <span class="title">Conectados</span>
                 <section class="container">
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - CNT] Ligação 1</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - CNT] Ligação 2</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - CNT] WhatsApp 1</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - CNT] Ligação 3</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - CNT] Ligação 4</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - CNT] WhatsApp 2</span>
+                    </div>
+                </section>
+                <section class="container">
                     <div class="script">
                         <span>Olá, XXX. Consegui uma condição especial para você, mas antes preciso confirmar algumas informações. Você está disponível hoje?"</span>
                     </div>
@@ -123,6 +255,20 @@
             <section class="fase">
                 <span class="title">Agendamento</span>
                 <section class="container">
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - AGD] WhatsApp 1</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - AGD] WhatsApp 2</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - AGD] Ligação 1</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - AGD] Ligação 2</span>
+                    </div>
+                </section>
+                <section class="container">
                     <div class="script">
                         <span>Olá, XXX! Apenas para lembrar que temos uma conversa agendada para confirmar algumas informações importantes. Só assim consigo enviar seu perfil para a próxima etapa das nossas Imersões</span>
                     </div>
@@ -135,6 +281,17 @@
             <!-- Reagendamento -->
             <section class="fase">
                 <span class="title">Reagendamento</span>
+                <section class="container">
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - RGD] Ligação 1</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - RGD] Ligação 2</span>
+                    </div>
+                    <div class="script script--tarefa">
+                        <span>[IM - SDR - RGD] WhatsApp 1</span>
+                    </div>
+                </section>
                 <section class="container">
                     <div class="script">
                         <span>Olá, XXX. Estou tentando retomar o contato para entender se podemos reagendar a entrevista com um de nossos especialistas</span>
@@ -170,12 +327,34 @@
             </section>
         </main>
 
+        <div onclick="scrollToTop()" class="scroll-top">
+            <img src="../src/arrow_upward_white_24dp.svg" alt="">
+        </div>
+
         <div id="toast" class="mdl-js-snackbar mdl-snackbar">
             <div class="mdl-snackbar__text"></div>
             <button class="mdl-snackbar__action" type="button"></button>
         </div>
+        <script defer src="../index.js"></script>
 
-        <script src="../../index.js"></script>
+
+        <script>
+            // let firstTime = localStorage.getItem('access');
+            let nome = localStorage.getItem('nome');
+            console.log(nome);
+            // console.log(firstTime)
+            
+            if (nome == null) {
+                let nomeSDR = prompt("Qual seu nome?");
+                localStorage.setItem('nome', nomeSDR);
+                nome = localStorage.getItem('nome');
+                // localStorage.setItem('access', false);
+            }
+
+            document.querySelectorAll('.nome').forEach(el => {
+                el.innerHTML = nome;
+            })
+        </script>
 </body>
 
 </html>

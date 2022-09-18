@@ -14,6 +14,26 @@
     font-weight: 900;
     font-size: 25px;
 }
+nav {
+    height: 2vw;
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+}
+nav a {
+    height: 100%;
+    padding: 0 3ch;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+
+}
 header {
     height: 40vh;
     width: 100%;
@@ -66,10 +86,21 @@ a {
     transition: 0.3s all;
     cursor: pointer;
 }
+.script--tarefa {
+    font-size: 18px;
+    min-width: 270px;
+    margin: 10px;
+    padding: 15px;
+    white-space: nowrap;
+    text-align: center;
+}
 .script:hover {
     background-color: var(--primary);
     box-shadow: rgba(250, 114, 104, 0.4) 5px 8px 18px 8px;
     color: white;
+}
+.script--tarefa:hover {
+    box-shadow: rgba(250, 114, 104, 0.4) 3px 3px 10px 5px;
 }
 .script.used {
     background-color: var(--primary);
@@ -106,6 +137,25 @@ a {
 .script::-webkit-scrollbar-track {
     width: 2px;
     border-radius: 50px;
+}
+.scroll-top {
+    background-color: var(--primary);
+    padding: 25px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s all;
+}
+.scroll-top:hover {
+    box-shadow: rgba(250, 114, 104, 0.4) 5px 8px 18px 8px;
+
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,0 +1,15 @@
+{
+    "background_color": "white",
+    "description": "Perder tempo copiando e escrevendo copy é coisa do passado",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "src/logo.svg",
+            "sizes": "192x192",
+            "type": "image/svg"
+        }
+    ],
+    "name": "Copycat",
+    "short_name": "Copycat",
+    "start_url": "index.html"
+}
