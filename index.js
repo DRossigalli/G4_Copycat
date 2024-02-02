@@ -1,6 +1,11 @@
 let box = document.querySelectorAll('.script');
 const snackbarContainer = document.querySelector('#toast');
 
+document.querySelectorAll('.container.container--tarefa').forEach(task => {
+    task.style.display = "none";
+  });
+  
+
 function scrollToTop() {
     document.querySelector("header").scrollIntoView(
         {
@@ -72,3 +77,4 @@ window.addEventListener('beforeinstallprompt', (e) => {
       });
   });
 });
+
