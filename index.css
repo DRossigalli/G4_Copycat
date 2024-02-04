@@ -15,7 +15,7 @@
     font-size: 25px;
 }
 nav {
-    height: 3vh;
+    max-height: 5vh;
     width: 100%;
     background-color: var(--primary);
     display: flex;
