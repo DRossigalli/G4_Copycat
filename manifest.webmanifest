@@ -1,0 +1,27 @@
+{
+    "background_color": "white",
+    "theme_color": "#ffffff",
+    "description": "Perder tempo copiando e escrevendo copy é coisa do passado",
+    "display": "fullscreen",
+    "form_factors": ["handset", "tablet", "desktop"],
+    "icons": [
+        {
+            "src": "src/android/android-launchericon-192-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "name": "Copycat",
+    "short_name": "Copycat",
+    "start_url": "index.html",
+    "screenshots": [
+        {
+            "src": "src/screenshot-1920x1080.png",
+            "type": "image/png",
+            "sizes": "1920x1080",
+            "platform": "windows",
+            "form_factor": "wide"
+        }
+    ]
+    
+}

@@ -1,0 +1,188 @@
+@font-face {
+    font-family: Product Sans;
+    src: url(src/product.ttf);
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Product Sans !important;
+    line-height: 160%;
+    --primary: #fa7268;
+}
+.title {
+    font-family: Product Sans !important;
+    font-weight: 900;
+    font-size: 25px;
+}
+nav {
+    height: 3vh;
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+}
+nav a {
+    height: 100%;
+    padding: 0 3ch;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+
+}
+header {
+    height: 40vh;
+    width: 100%;
+    padding: 40px;
+    font-size: 170px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+main {
+    width: 100%;
+    padding: 50px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.fase {
+    padding: 5px;
+}
+.container {
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+}
+.tarefa > .script {
+    margin: 20px 30px 0 20px;
+    border-radius: 10px 10px 0 0;
+    max-width: 320px;
+    font-size: 18px;
+}
+.tarefa > .script:nth-child(2) {
+    margin: 0 30px 20px 20px;
+    border-radius: 0 0 10px 10px;
+    background-color: linear-gradient(rgb(240, 240, 240), rgb(0, 0, 0));
+}
+.script {
+    min-width: 200px;
+    max-width: 400px;
+    /* min-height: 1vh; */
+    max-height: 30vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 1.5em;
+    margin: 1em;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    font-size: 130%;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 5px 5px 0px;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+.script--tarefa {
+    font-size: 18px;
+    min-width: 260px;
+    margin: 5px;
+    padding: 15px;
+    white-space: nowrap;
+    text-align: center;
+}
+.script:hover {
+    background-color: var(--primary);
+    box-shadow: rgba(250, 114, 104, 0.4) 5px 8px 18px 8px;
+    color: white;
+}
+.script--tarefa:hover {
+    box-shadow: rgba(250, 114, 104, 0.4) 3px 3px 10px 5px;
+}
+.script.used {
+    background-color: var(--primary);
+    color: white;
+}
+.script.active {
+    background-color: var(--primary);
+    color: white;
+}
+.active {
+    background-color: var(--primary);
+    color: white;
+}
+.container::-webkit-scrollbar {
+    height: 5px;
+}
+.script::-webkit-scrollbar {
+    width: 4px;
+}
+.container::-webkit-scrollbar-thumb {
+    width: 5px;
+    border-radius: 50px;
+    background-color: var(--primary);
+}
+.script::-webkit-scrollbar-thumb {
+    width: 4px;
+    border-radius: 50px;
+    background-color: var(--primary);
+}
+.container::-webkit-scrollbar-track {
+    width: 2px;
+    border-radius: 50px;
+}
+.script::-webkit-scrollbar-track {
+    width: 2px;
+    border-radius: 50px;
+}
+.scroll-top {
+    background-color: var(--primary);
+    padding: 25px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s all;
+}
+.scroll-top:hover {
+    box-shadow: rgba(250, 114, 104, 0.4) 5px 8px 18px 8px;
+
+}
+
+@media only screen and (max-width: 1000px) {
+    main {
+        padding: 20px 0 20px 20px;
+    }
+    header {
+        padding: 20px;
+        font-size: 20vw;
+    }
+    .fase {
+        padding: 0;
+    }
+    .container {
+        /* overflow-x: scroll; */
+        padding: 10px 0;
+        /* scroll-snap-type: x mandatory; */
+    }
+    .container--tarefa {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .script {
+        margin: 20px 40px 20px 0;
+    }
+}
