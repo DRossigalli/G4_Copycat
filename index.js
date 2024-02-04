@@ -25,7 +25,7 @@ function share() {
         }).then(() => {
             console.log('Thanks for sharing!');
             var data = { message: 'Obrigado por compartilhar!' };
-            snackbarContainer.MaterialSnackbar.showSnackbar(data);
+            // snackbarContainer.MaterialSnackbar.showSnackbar(data);
         }).catch(err => {
                 console.log(`Couldn't share because of`, err.message);
             });
@@ -60,21 +60,72 @@ box.forEach(frase => {
 let deferredPrompt;
 const installButton = document.querySelector('.installApp');
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
+// installButton.addEventListener('click');
 
-  installButton.addEventListener('click', (e) => {
-    console.log('funciona')
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-      });
-  });
+// window.addEventListener('beforeinstallprompt', (e) => {
+// //   e.preventDefault();
+//   deferredPrompt = e;
+//   console.log(e)
+
+//   installButton.addEventListener('click', (e) => {
+//     console.log('funciona')
+//     deferredPrompt.prompt();
+//     deferredPrompt.userChoice.then((choiceResult) => {
+//         if (choiceResult.outcome === 'accepted') {
+//           console.log('User accepted the A2HS prompt');
+//         } else {
+//           console.log('User dismissed the A2HS prompt');
+//         }
+//         deferredPrompt = null;
+//       });
+//   });
+// });
+
+// Registra o evento beforeinstallprompt
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
 });
 
+// Adiciona um evento de clique ao botão de instalação
+// installButton.addEventListener('click', (e) => {
+//     if (deferredPrompt) {
+//         deferredPrompt.prompt();
+//         deferredPrompt.userChoice.then((choiceResult) => {
+//             if (choiceResult.outcome === 'accepted') {
+//                 console.log('O usuário aceitou a instalação');
+//             } else {
+//                 console.log('O usuário recusou a instalação');
+//             }
+//             deferredPrompt = null;
+//         });
+//     }
+// });
+document.addEventListener("DOMContentLoaded", function() {
+    var copyBox = document.querySelectorAll('.script');
+    copyBox.forEach(function(copy) {
+        console.log('+1')
+        var divHeight = copy.clientHeight;
+        var textHeight = copy.getElementsByTagName('span').clientHeight;
+        if (textHeight > divHeight) {
+            console.log('maior')
+            copy.classList.add('script--shadow');
+        }
+    });
+});
+
+
+function installApp() {
+    console.log('funfa')
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('O usuário aceitou a instalação');
+            } else {
+                console.log('O usuário recusou a instalação');
+            }
+            deferredPrompt = null;
+        });
+    }
+}
