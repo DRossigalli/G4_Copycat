@@ -32,6 +32,24 @@ function share() {
     }
 }
 
+const bomDia = "Bom dia";
+const boaTarde = "Boa tarde";
+const boaNoite = "Boa noite";
+
+const agora = Date.now();
+const dataHora = new Date(agora);
+const hora = dataHora.getHours();
+
+let mensagem = document.querySelector('.horario')
+if (hora < 12) {
+  mensagem.innerHTML = 'Bom dia'
+} else if (hora < 19) {
+    mensagem.innerHTML = 'Boa tarde'
+} else {
+    mensagem.innerHTML = 'Boa noite'
+}
+
+
 box.forEach(frase => {
     frase.addEventListener('click', e => {
         box.forEach(b => {
