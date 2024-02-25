@@ -1,6 +1,24 @@
 let box = document.querySelectorAll('.script');
 const snackbarContainer = document.querySelector('#toast');
 
+ScrollReveal().reveal('.reveal', {
+    delay: 150, 
+    distance: '50px', 
+    origin: 'left',
+    interval: 150,
+    duration: 400
+});
+
+
+// anime({
+//     targets: '.anime',
+//     opacity: [0, 1],
+//     translateX: [-120, 0],
+//     delay: anime.stagger(100, { from: 'first', start: 500 }),
+//     easing: 'easeOutExpo',
+//     // duration: 30000
+// })
+
 document.querySelectorAll('.container.container--tarefa').forEach(task => {
     task.style.display = "none";
   });
@@ -16,19 +34,37 @@ function scrollToTop() {
     console.log('funciona')
 }
 
+// function share() {
+//     if (navigator.share) {
+//         navigator.share({
+//             title: 'Copycat',
+//             text: 'Perder tempo copiando e escrevendo copy é coisa do passado',
+//             url: 'https://g4-copycat.vercel.app'
+//         }).then(() => {
+//             console.log('Thanks for sharing!');
+//             var data = { message: 'Obrigado por compartilhar!' };
+//             // snackbarContainer.MaterialSnackbar.showSnackbar(data);
+//         }).catch(err => {
+//                 console.log(`Couldn't share because of`, err.message);
+//             });
+//     }
+// }
+
+const shareData = {
+    title: 'Copycat',
+    text: 'Perder tempo copiando e escrevendo copy é coisa do passado. Mude a vida de outro SDR agora mesmo',
+    url: 'https://g4-copycat.vercel.app',
+  };
+
 function share() {
-    if (navigator.share) {
-        navigator.share({
-            title: 'Copycat',
-            text: 'Perder tempo copiando e escrevendo copy é coisa do passado',
-            url: 'https://g4-copycat.vercel.app'
-        }).then(() => {
-            console.log('Thanks for sharing!');
-            var data = { message: 'Obrigado por compartilhar!' };
-            // snackbarContainer.MaterialSnackbar.showSnackbar(data);
-        }).catch(err => {
-                console.log(`Couldn't share because of`, err.message);
-            });
+    if ('share' in navigator) {
+        navigator.share(shareData)
+        .then(() => {
+          console.log('Compartilhamento bem-sucedido');
+        })
+        .catch((error) => {
+          console.log('Erro ao compartilhar');
+        })
     }
 }
 
@@ -41,13 +77,32 @@ const dataHora = new Date(agora);
 const hora = dataHora.getHours();
 
 let mensagem = document.querySelector('.horario')
-if (hora < 12) {
-  mensagem.innerHTML = 'Bom dia'
-} else if (hora < 19) {
-    mensagem.innerHTML = 'Boa tarde'
-} else {
-    mensagem.innerHTML = 'Boa noite'
+
+if (mensagem != null) {
+    if (hora < 12 ) {
+        mensagem.innerHTML = 'Bom dia'
+        let reload = (1000*60*60) * (12 - hora)
+        setTimeout(() => {
+            location.reload();
+        }, reload);
+        console.log(reload)
+      } else if (hora < 19) {
+          mensagem.innerHTML = 'Boa tarde'
+          let reload = (1000*60*60) * (19 - hora)
+        setTimeout(() => {
+            location.reload();
+        }, reload);
+        console.log(reload)
+      } else {
+          mensagem.innerHTML = 'Boa noite'
+          let reload = (1000*60*60) * (12 - hora)
+        setTimeout(() => {
+            location.reload();
+        }, reload);
+        console.log(reload)
+      }
 }
+
 
 
 box.forEach(frase => {
