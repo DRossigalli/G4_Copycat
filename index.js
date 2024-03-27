@@ -95,7 +95,7 @@ if (mensagem != null) {
         console.log(reload)
       } else {
           mensagem.innerHTML = 'Boa noite'
-          let reload = (1000*60*60) * (12 - hora)
+          //let reload = (1000*60*60) * (12 - hora)
         setTimeout(() => {
             location.reload();
         }, reload);
