@@ -94,12 +94,12 @@ if (mensagem != null) {
         }, reload);
         console.log(reload)
       } else {
-          mensagem.innerHTML = 'Boa noite'
+          //mensagem.innerHTML = 'Boa noite'
           //let reload = (1000*60*60) * (12 - hora)
-        setTimeout(() => {
-            location.reload();
-        }, reload);
-        console.log(reload)
+        //setTimeout(() => {
+            //location.reload();
+        //}, reload);
+        //console.log(reload)
       }
 }
 
